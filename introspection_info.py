@@ -9,7 +9,7 @@ def introspection_info(obj):
     attr_list = []
     metod_list = []
     for attr in dir(obj):
-        if 'method' in str(type(getattr(obj, attr))).lower():
+        if callable(getattr(obj, attr)):
             metod_list.append(attr)
         else:
             attr_list.append(attr)
