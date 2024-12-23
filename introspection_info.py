@@ -20,27 +20,31 @@ def introspection_info(obj):
 
 
 if __name__ == '__main__':
+    # Для числа
     number_info = introspection_info(42)
     print(f'Для объекта number_info получена следующая информация:')
     pprint(number_info)
     input('Для продолжения в окне консоли нажмите клавишу ENTER')
 
+    # Для строки
     str_info = introspection_info('Hello!!!')
     print(f'Для объекта str_info получена следующая информация:')
     pprint(str_info)
     input('Для продолжения в окне консоли нажмите клавишу ENTER')
 
+    # Для функции
     def_info = introspection_info(introspection_info)
     print(f'Для объекта introspection_info получена следующая информация:')
     pprint(def_info)
     input('Для продолжения в окне консоли нажмите клавишу ENTER')
 
+    # Для библиотеки
     inspect_info = introspection_info(inspect)
-
     print(f'Для объекта introspection_info получена следующая информация:')
     pprint(inspect_info)
     input('Для продолжения в окне консоли нажмите клавишу ENTER')
 
+    # Для списка
     list_info = introspection_info([42, 'Hello!!!', True])
     print(f'Для объекта list_info получена следующая информация:')
     pprint(list_info)
